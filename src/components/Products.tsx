@@ -20,8 +20,8 @@ export default function Products() {
       ],
       link: 'https://kursum.masavtech.com',
       icon: GraduationCap,
-      gradient: 'from-blue-600/20 via-indigo-600/10 to-transparent',
-      borderColor: 'hover:border-indigo-500/50'
+      gradient: 'from-blue-600/20 via-[#2c98f6]/10 to-transparent',
+      borderColor: 'hover:border-[#2c98f6]/50'
     },
     {
       id: 'sinavim',
@@ -66,13 +66,13 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-950/70 border border-indigo-500/30 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2c98f6]/10 border border-[#2c98f6]/30 text-[#2c98f6] text-xs font-semibold uppercase tracking-wider mb-3">
             <Layers className="w-3.5 h-3.5" />
             <span>Ürün Ekosistemimiz</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             Masavtech Tarafından Geliştirilen{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c98f6] to-cyan-400">
               SaaS Ürünleri
             </span>
           </h2>
@@ -87,11 +87,11 @@ export default function Products() {
             return (
               <div 
                 key={product.id}
-                className={`group relative rounded-2xl bg-slate-900/60 border border-slate-800 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-indigo-500/10 ${product.borderColor}`}
+                className={`group relative rounded-2xl bg-slate-900/60 border border-slate-800 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#2c98f6]/10 ${product.borderColor}`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                    <div className="w-14 h-14 rounded-2xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-[#2c98f6] group-hover:scale-110 transition-transform">
                       <Icon className="w-7 h-7" />
                     </div>
                     <span className={`text-xs font-medium px-3 py-1 rounded-full border ${product.badgeColor}`}>
@@ -103,7 +103,7 @@ export default function Products() {
                     <span className="text-xs uppercase tracking-wider font-semibold text-slate-400">
                       {product.category}
                     </span>
-                    <h3 className="text-2xl font-bold text-white mt-1 group-hover:text-indigo-300 transition-colors">
+                    <h3 className="text-2xl font-bold text-white mt-1 group-hover:text-sky-300 transition-colors">
                       {product.name}
                     </h3>
                     <p className="mt-3 text-sm text-slate-300 leading-relaxed">
@@ -114,7 +114,7 @@ export default function Products() {
                   <div className="mt-6 pt-6 border-t border-slate-800/80 space-y-2.5">
                     {product.features.map((feat, index) => (
                       <div key={index} className="flex items-start gap-2.5 text-xs text-slate-300">
-                        <CheckCircle className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-[#2c98f6] shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -127,7 +127,7 @@ export default function Products() {
                       href={product.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/30 transition-all"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold text-white bg-[#2c98f6] hover:bg-blue-600 shadow-md shadow-[#2c98f6]/30 transition-all"
                     >
                       <span>Uygulamaya Git</span>
                       <ExternalLink className="w-4 h-4" />

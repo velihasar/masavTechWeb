@@ -27,7 +27,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className="antialiased min-h-screen font-sans bg-[#070b14] text-slate-100 selection:bg-indigo-500 selection:text-white">
+      <body className="antialiased min-h-screen font-sans bg-[#070b14] text-slate-100 selection:bg-[#2c98f6] selection:text-white">
         {children}
       </body>
     </html>

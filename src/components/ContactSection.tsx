@@ -30,19 +30,19 @@ export default function ContactSection() {
 
   return (
     <section id="iletisim" className="py-24 bg-[#080d19]/80 relative overflow-hidden">
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-[#2c98f6]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-950/70 border border-indigo-500/30 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2c98f6]/10 border border-[#2c98f6]/30 text-[#2c98f6] text-xs font-semibold uppercase tracking-wider mb-4">
               <Sparkles className="w-3.5 h-3.5" />
               <span>İletişime Geçin</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
               Bir Sonraki Büyük Projenizi{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c98f6] to-cyan-400">
                 Birlikte Başlatalım.
               </span>
             </h2>
@@ -53,9 +53,9 @@ export default function ContactSection() {
             <div className="mt-8 space-y-4">
               <a 
                 href="mailto:info@masavtech.com" 
-                className="flex items-center gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/40 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-[#2c98f6]/40 transition-all group"
               >
-                <div className="w-10 h-10 rounded-lg bg-indigo-950/70 border border-indigo-500/30 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-lg bg-[#2c98f6]/10 border border-[#2c98f6]/30 flex items-center justify-center text-[#2c98f6] group-hover:scale-110 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -107,7 +107,7 @@ export default function ContactSection() {
                     placeholder="Örn: Ahmet Yılmaz / Masav A.Ş."
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#2c98f6]"
                   />
                 </div>
 
@@ -121,7 +121,7 @@ export default function ContactSection() {
                     placeholder="ahmet@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#2c98f6]"
                   />
                 </div>
 
@@ -133,7 +133,7 @@ export default function ContactSection() {
                     <select 
                       value={formData.projectType}
                       onChange={(e) => setFormData({...formData, projectType: e.target.value})}
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-indigo-500"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-[#2c98f6]"
                     >
                       <option>Web & Mobil Uygulama</option>
                       <option>Yapay Zeka / LLM Entegrasyonu</option>
@@ -149,7 +149,7 @@ export default function ContactSection() {
                     <select 
                       value={formData.budget}
                       onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-indigo-500"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-[#2c98f6]"
                     >
                       <option>25.000 TL - 50.000 TL</option>
                       <option>50.000 TL - 150.000 TL</option>
@@ -169,13 +169,13 @@ export default function ContactSection() {
                     placeholder="Projenizden ve hedeflerinizden kısaca bahsedin..."
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#2c98f6] resize-none"
                   />
                 </div>
 
                 <button 
                   type="submit"
-                  className="w-full py-4 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 shadow-xl shadow-indigo-600/30 transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-[#2c98f6] to-blue-600 hover:from-blue-500 hover:to-blue-700 shadow-xl shadow-[#2c98f6]/30 transition-all flex items-center justify-center gap-2"
                 >
                   <span>Teklif Talebini Gönder</span>
                   <Send className="w-4 h-4" />

@@ -54,7 +54,7 @@ export default function Services() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             Uçtan Uca{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-[#2c98f6]">
               Mühendislik & Yazılım Çözümleri
             </span>
           </h2>
@@ -69,13 +69,13 @@ export default function Services() {
             return (
               <div 
                 key={index}
-                className="group p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/40 hover:bg-slate-900/80 transition-all duration-300 flex flex-col justify-between shadow-lg shadow-black/20"
+                className="group p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-[#2c98f6]/40 hover:bg-slate-900/80 transition-all duration-300 flex flex-col justify-between shadow-lg shadow-black/20"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                  <div className="w-12 h-12 rounded-xl bg-[#2c98f6]/10 border border-[#2c98f6]/30 flex items-center justify-center text-[#2c98f6] mb-6 group-hover:scale-110 group-hover:bg-[#2c98f6] group-hover:text-white transition-all">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                  <h3 className="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
                     {srv.title}
                   </h3>
                   <p className="mt-3 text-sm text-slate-300 leading-relaxed">

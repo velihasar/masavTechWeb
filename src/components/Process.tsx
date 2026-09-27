@@ -36,12 +36,12 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-950/70 border border-violet-500/30 text-violet-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2c98f6]/10 border border-[#2c98f6]/30 text-[#2c98f6] text-xs font-semibold uppercase tracking-wider mb-3">
             <span>Çalışma Metodolojimiz</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             Fikirden Canlıya{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c98f6] to-cyan-400">
               4 Adımlı Başarı Süreci
             </span>
           </h2>
@@ -56,14 +56,14 @@ export default function Process() {
             return (
               <div 
                 key={index}
-                className="relative p-6 rounded-2xl bg-slate-900/40 border border-slate-800/90 flex flex-col justify-between hover:border-violet-500/40 transition-all"
+                className="relative p-6 rounded-2xl bg-slate-900/40 border border-slate-800/90 flex flex-col justify-between hover:border-[#2c98f6]/40 transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-3xl font-black font-mono text-slate-700">
                       {s.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-violet-950/60 border border-violet-500/30 flex items-center justify-center text-violet-400">
+                    <div className="w-10 h-10 rounded-xl bg-[#2c98f6]/10 border border-[#2c98f6]/30 flex items-center justify-center text-[#2c98f6]">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>

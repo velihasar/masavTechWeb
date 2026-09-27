@@ -25,14 +25,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           
           <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 p-[1px] shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2c98f6] via-blue-500 to-cyan-400 p-[1px] shadow-lg shadow-[#2c98f6]/20 group-hover:shadow-[#2c98f6]/40 transition-all">
               <div className="w-full h-full bg-[#090e1a] rounded-[11px] flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-indigo-400 group-hover:scale-110 transition-transform" />
+                <Sparkles className="w-5 h-5 text-[#2c98f6] group-hover:scale-110 transition-transform" />
               </div>
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-tight text-white flex items-center">
-                MASAV<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">TECH</span>
+                MASAV<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c98f6] to-cyan-400">TECH</span>
               </span>
               <span className="text-[10px] tracking-widest text-slate-400 uppercase font-medium -mt-1">
                 Technology Solutions
@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <a 
               href="#iletisim"
-              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 shadow-lg shadow-indigo-600/25 hover:shadow-indigo-600/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#2c98f6] to-blue-600 hover:from-blue-400 hover:to-blue-600 shadow-lg shadow-[#2c98f6]/25 hover:shadow-[#2c98f6]/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Teklif Alın</span>
               <ArrowRight className="w-4 h-4" />
@@ -109,7 +109,7 @@ export default function Navbar() {
             <a 
               href="#iletisim"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/30"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-[#2c98f6] hover:bg-blue-600 shadow-lg shadow-[#2c98f6]/30"
             >
               <span>Teklif Alın / İletişim</span>
               <ArrowRight className="w-4 h-4" />

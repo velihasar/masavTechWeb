@@ -12,13 +12,13 @@ export default function Footer() {
           
           <div className="md:col-span-2 space-y-4">
             <a href="#" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-cyan-400 p-[1px]">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#2c98f6] to-cyan-400 p-[1px]">
                 <div className="w-full h-full bg-[#090e1a] rounded-[7px] flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-indigo-400" />
+                  <Sparkles className="w-4 h-4 text-[#2c98f6]" />
                 </div>
               </div>
               <span className="text-lg font-bold tracking-tight text-white">
-                MASAV<span className="text-indigo-400">TECH</span>
+                MASAV<span className="text-[#2c98f6]">TECH</span>
               </span>
             </a>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
@@ -29,19 +29,19 @@ export default function Footer() {
           <div className="space-y-3">
             <div className="text-xs font-bold text-white uppercase tracking-wider">Ürünlerimiz</div>
             <ul className="space-y-2 text-xs">
-              <li><a href="https://kursum.masavtech.com" className="hover:text-indigo-400 transition-colors">Kursum</a></li>
-              <li><a href="#urunler" className="hover:text-indigo-400 transition-colors">Sınavım</a></li>
-              <li><a href="#urunler" className="hover:text-indigo-400 transition-colors">Cüzdanım</a></li>
+              <li><a href="https://kursum.masavtech.com" className="hover:text-[#2c98f6] transition-colors">Kursum</a></li>
+              <li><a href="#urunler" className="hover:text-[#2c98f6] transition-colors">Sınavım</a></li>
+              <li><a href="#urunler" className="hover:text-[#2c98f6] transition-colors">Cüzdanım</a></li>
             </ul>
           </div>
 
           <div className="space-y-3">
             <div className="text-xs font-bold text-white uppercase tracking-wider">Hızlı Erişim</div>
             <ul className="space-y-2 text-xs">
-              <li><a href="#hizmetler" className="hover:text-indigo-400 transition-colors">Hizmetlerimiz</a></li>
-              <li><a href="#teknolojiler" className="hover:text-indigo-400 transition-colors">Teknolojiler</a></li>
-              <li><a href="#surec" className="hover:text-indigo-400 transition-colors">Çalışma Süreci</a></li>
-              <li><a href="#iletisim" className="hover:text-indigo-400 transition-colors">Teklif Alın</a></li>
+              <li><a href="#hizmetler" className="hover:text-[#2c98f6] transition-colors">Hizmetlerimiz</a></li>
+              <li><a href="#teknolojiler" className="hover:text-[#2c98f6] transition-colors">Teknolojiler</a></li>
+              <li><a href="#surec" className="hover:text-[#2c98f6] transition-colors">Çalışma Süreci</a></li>
+              <li><a href="#iletisim" className="hover:text-[#2c98f6] transition-colors">Teklif Alın</a></li>
             </ul>
           </div>
 
