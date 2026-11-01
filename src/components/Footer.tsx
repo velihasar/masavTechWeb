@@ -1,61 +1,86 @@
 'use client';
 
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050811] border-t border-slate-800/80 py-12 text-slate-400 text-sm">
+    <footer className="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800/60">
-          
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-200">
           <div className="md:col-span-2 space-y-4">
-            <a href="#" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#2c98f6] to-cyan-400 p-[1px]">
-                <div className="w-full h-full bg-[#090e1a] rounded-[7px] flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-[#2c98f6]" />
-                </div>
-              </div>
-              <span className="text-lg font-bold tracking-tight text-white">
-                MASAV<span className="text-[#2c98f6]">TECH</span>
-              </span>
-            </a>
-            <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              Yapay zeka, modern web mimarileri, bulut altyapıları ve yenilikçi SaaS ekosistemiyle kurumların dijital geleceğini tasarlıyoruz.
+            <Link href="/" className="inline-block -my-2">
+              <img
+                src="/logo.png"
+                alt="MasavTech - Software & App Solutions"
+                className="h-16 sm:h-20 w-auto object-contain"
+              />
+            </Link>
+            <p className="text-xs text-slate-500 max-w-sm leading-relaxed">
+              Kurumsal web yönetim panelleri, iOS & Android mobil uygulamalar ve yenilikçi SaaS ürünleriyle kurumların dijital dönüşümünü inşa ediyoruz.
             </p>
           </div>
 
           <div className="space-y-3">
-            <div className="text-xs font-bold text-white uppercase tracking-wider">Ürünlerimiz</div>
+            <div className="text-xs font-bold text-slate-900 uppercase tracking-wider">
+              Ürünlerimiz
+            </div>
             <ul className="space-y-2 text-xs">
-              <li><a href="https://kursum.masavtech.com" className="hover:text-[#2c98f6] transition-colors">Kursum</a></li>
-              <li><a href="#urunler" className="hover:text-[#2c98f6] transition-colors">Sınavım</a></li>
-              <li><a href="#urunler" className="hover:text-[#2c98f6] transition-colors">Cüzdanım</a></li>
+              <li>
+                <Link href="/urunler#kursum" className="hover:text-[#2c98f6] transition-colors">
+                  Kursum — Eğitim Yönetim Sistemi
+                </Link>
+              </li>
+              <li>
+                <Link href="/urunler#sinavim" className="hover:text-[#2c98f6] transition-colors">
+                  Sınavım — Tüm Sınavlarla Uyumlu Asistan
+                </Link>
+              </li>
+              <li>
+                <Link href="/urunler#cuzdanim" className="hover:text-[#2c98f6] transition-colors">
+                  Cüzdanım — Varlık & Bütçe Takibi
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div className="space-y-3">
-            <div className="text-xs font-bold text-white uppercase tracking-wider">Hızlı Erişim</div>
+            <div className="text-xs font-bold text-slate-900 uppercase tracking-wider">
+              Kurumsal
+            </div>
             <ul className="space-y-2 text-xs">
-              <li><a href="#hizmetler" className="hover:text-[#2c98f6] transition-colors">Hizmetlerimiz</a></li>
-              <li><a href="#teknolojiler" className="hover:text-[#2c98f6] transition-colors">Teknolojiler</a></li>
-              <li><a href="#surec" className="hover:text-[#2c98f6] transition-colors">Çalışma Süreci</a></li>
-              <li><a href="#iletisim" className="hover:text-[#2c98f6] transition-colors">Teklif Alın</a></li>
+              <li>
+                <Link href="/" className="hover:text-[#2c98f6] transition-colors">
+                  Anasayfa
+                </Link>
+              </li>
+              <li>
+                <Link href="/urunler" className="hover:text-[#2c98f6] transition-colors">
+                  Ürünlerimiz
+                </Link>
+              </li>
+              <li>
+                <Link href="/hizmetler" className="hover:text-[#2c98f6] transition-colors">
+                  Hizmetlerimiz
+                </Link>
+              </li>
+              <li>
+                <Link href="/surec" className="hover:text-[#2c98f6] transition-colors">
+                  Nasıl Çalışırız?
+                </Link>
+              </li>
+              <li>
+                <Link href="/iletisim" className="hover:text-[#2c98f6] transition-colors">
+                  İletişim & Teklif Alın
+                </Link>
+              </li>
             </ul>
           </div>
-
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <div>
-            © {new Date().getFullYear()} Masavtech Teknoloji A.Ş. Tüm hakları saklıdır.
-          </div>
-          <div className="flex items-center gap-1 text-slate-500">
-            <span>Yüksek performans ile inşa edildi</span>
-          </div>
+        <div className="pt-8 text-center text-xs text-slate-500">
+          © {new Date().getFullYear()} MasavTech Yazılım & Teknoloji A.Ş. Tüm hakları saklıdır.
         </div>
-
       </div>
     </footer>
   );

@@ -1,11 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,59 +18,66 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navItems = [
+    { label: 'Anasayfa', href: '/' },
+    { label: 'Ürünlerimiz', href: '/urunler' },
+    { label: 'Hizmetlerimiz', href: '/hizmetler' },
+    { label: 'Nasıl Çalışırız?', href: '/surec' },
+  ];
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'py-3 bg-[#070b14]/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/30' 
-        : 'py-6 bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'py-3 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs'
+          : 'py-4 bg-white/85 backdrop-blur-sm border-b border-slate-100'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
-          <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2c98f6] via-blue-500 to-cyan-400 p-[1px] shadow-lg shadow-[#2c98f6]/20 group-hover:shadow-[#2c98f6]/40 transition-all">
-              <div className="w-full h-full bg-[#090e1a] rounded-[11px] flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-[#2c98f6] group-hover:scale-110 transition-transform" />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white flex items-center">
-                MASAV<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c98f6] to-cyan-400">TECH</span>
-              </span>
-              <span className="text-[10px] tracking-widest text-slate-400 uppercase font-medium -mt-1">
-                Technology Solutions
-              </span>
-            </div>
-          </a>
+          <Link href="/" className="flex items-center group -my-2">
+            <img
+              src="/logo.png"
+              alt="MasavTech - Software & App Solutions"
+              className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+            />
+          </Link>
 
-          <nav className="hidden md:flex items-center gap-1 bg-slate-900/60 border border-slate-800/80 rounded-full px-5 py-1.5 backdrop-blur-md">
-            <a href="#hizmetler" className="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white transition-colors">
-              Hizmetler
-            </a>
-            <a href="#urunler" className="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white transition-colors">
-              Ürünlerimiz
-            </a>
-            <a href="#teknolojiler" className="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white transition-colors">
-              Teknolojiler
-            </a>
-            <a href="#surec" className="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white transition-colors">
-              Nasıl Çalışırız?
-            </a>
+          <nav className="hidden md:flex items-center gap-7">
+            {navItems.map((item) => {
+              const isActive =
+                item.href === '/'
+                  ? pathname === '/'
+                  : pathname.startsWith(item.href.replace('/#', '/'));
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-semibold transition-colors ${
+                    isActive
+                      ? 'text-[#2c98f6]'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <a 
-              href="#iletisim"
-              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#2c98f6] to-blue-600 hover:from-blue-400 hover:to-blue-600 shadow-lg shadow-[#2c98f6]/25 hover:shadow-[#2c98f6]/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+            <Link
+              href="/iletisim"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-[#2c98f6] to-blue-600 hover:from-blue-500 hover:to-blue-700 shadow-md shadow-[#2c98f6]/25 hover:shadow-[#2c98f6]/40 transition-all transform hover:-translate-y-0.5"
             >
-              <span>Teklif Alın</span>
+              <span>İletişim</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
 
-          <button 
+          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
+            className="md:hidden p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900"
             aria-label="Menüyü Aç"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -76,44 +86,26 @@ export default function Navbar() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden mt-3 px-4 pt-2 pb-6 bg-[#090e1a]/95 backdrop-blur-xl border-b border-slate-800 space-y-3">
-          <a 
-            href="#hizmetler" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800"
-          >
-            Hizmetler
-          </a>
-          <a 
-            href="#urunler" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800"
-          >
-            Ürünlerimiz
-          </a>
-          <a 
-            href="#teknolojiler" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800"
-          >
-            Teknolojiler
-          </a>
-          <a 
-            href="#surec" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800"
-          >
-            Nasıl Çalışırız?
-          </a>
+        <div className="md:hidden mt-3 px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-slate-200 space-y-2 shadow-lg">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-100"
+            >
+              {item.label}
+            </Link>
+          ))}
           <div className="pt-2">
-            <a 
-              href="#iletisim"
+            <Link
+              href="/iletisim"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-[#2c98f6] hover:bg-blue-600 shadow-lg shadow-[#2c98f6]/30"
             >
-              <span>Teklif Alın / İletişim</span>
+              <span>İletişim</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       )}
